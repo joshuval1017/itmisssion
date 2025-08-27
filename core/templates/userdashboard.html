@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .dashboard-container {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 400px;
+    }
+
+    h1 {
+      color: #005f99;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #333;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      padding: 0.7rem 1.5rem;
+      background-color: #d9534f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #c9302c;
+    }
+
+    .message {
+      margin-top: 1rem;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Welcome to your dashboard!</h1>
+    <p>You are successfully logged in.</p>
+    <button id="logoutBtn">Logout</button>
+    <div class="message" id="message"></div>
+  </div>
+
+  <!-- <script>
+   document.getElementById('logoutBtn').addEventListener('click', async () => {
+  try {
+    const response = await fetch('/auth/logout/', {
+      method: 'POST',
+      credentials: 'include'
+    });
+
+    if (response.redirected) {
+      window.location.href = response.url; // ✅ Follow redirect
+    } else {
+      document.getElementById('message').textContent = 'Logout failed';
+    }
+  } catch (err) {
+    document.getElementById('message').textContent = 'Server error';
+  }
+});
+
+  </script> -->
+</body>
+</html>
+
